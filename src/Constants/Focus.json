@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "text": "event-planning",
+    "image": "/Activities/eventPlanning.png"
+  },
+  {
+    "id": "2",
+    "text": "decorations",
+    "image": "/Activities/Decoration.png"
+  },
+  {
+    "id": "3",
+    "text": "camera",
+    "image": "/Activities/Camera.png"
+  },
+  {
+    "id": "4",
+    "text": "audio-videos",
+    "image": "/Activities/Audio-Videos.png"
+  },
+  {
+    "id": "5",
+    "text": "logistics",
+    "image": "/Activities/Logistics.png"
+  },
+  {
+    "id": "6",
+    "text": "cultural-activities",
+    "image": "/Activities/culturalActivities.png"
+  },
+  {
+    "id": "7",
+    "text": "catrine-foods",
+    "image": "/Activities/CatrineFoods.png"
+  },
+  {
+    "id": "8",
+    "text": "man-power",
+    "image": "/Activities/ManPower.png"
+  }
+]

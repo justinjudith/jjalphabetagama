@@ -1,0 +1,38 @@
+[
+  {
+    "id":"1",
+    "image": "/Slider/Img1.jpg",
+    "title": "Loretta Holy Communion",
+    "about": "Communion Photos"
+  },
+  {
+    "id":"2",
+    "image": "/Slider/Img2.jpg",
+    "title": "Title",
+    "about": "About"
+  },
+  {
+    "id": "3",
+    "image": "/Slider/Img3.jpg",
+    "title": "Title",
+    "about": "About"
+  },
+  {
+    "id":"4",
+    "image": "/Slider/Img4.jpg",
+    "title": "Title",
+    "about": "About"
+  },
+  {
+    "id": "5",
+    "image": "/Slider/Img5.jpg",
+    "title": "Title",
+    "about": "About"
+  },
+  {
+    "id": "6",
+    "image": "/Slider/Img6.jpg",
+    "title": "Title",
+    "about": "About"
+  }
+]

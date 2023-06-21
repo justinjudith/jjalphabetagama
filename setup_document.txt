@@ -1,0 +1,10 @@
+Project setup
+In the project directory, you can run:
+
+npm install
+
+
+or
+
+For Development or Running it in Local Environment Run
+npm run dev

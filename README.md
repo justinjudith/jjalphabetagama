@@ -1,112 +1,34 @@
-# React Typescript Login example with Axios and Web API
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Build React Typescript Login and Registration example with React Router, Axios and Bootstrap (without Redux):
-- JWT Authentication Flow for User Signup & User Login
-- Project Structure for React Typescript Authentication (without Redux) with React Router & Axios
-- Creating React Components with Form Validation using Formik and Yup
-- React Typescript Components for accessing protected Resources (Authorization)
-- Dynamic Navigation Bar in React Typescript App
+## Getting Started
 
-For instruction, please visit:
-> [React Typescript Login and Registration example](https://www.bezkoder.com/react-typescript-login-example/)
+First, run the development server:
 
-> [React Typescript Login and Registration example (using Hooks)](https://www.bezkoder.com/react-typescript-authentication-example/)
-
-Signup Page:
-
-![react-typescript-login-example-signup](react-typescript-login-example-signup.png)
-
-Form Validation:
-
-![react-typescript-login-example-form-validation](react-typescript-login-example-form-validation.png)
-
-Login Page:
-
-![react-typescript-login-example-login](react-typescript-login-example-login.png)
-
-Profile Page:
-
-![react-typescript-login-example-profile-page](react-typescript-login-example-profile-page.png)
-
-This React Client works well with following back-end Server:
-> [Spring Boot: JWT Authentication & Authorization with MySQL](https://www.bezkoder.com/spring-boot-jwt-authentication/)
-
-> [Spring Boot: JWT Authentication & Authorization with PostgreSQL](https://www.bezkoder.com/spring-boot-security-postgresql-jwt-authentication/)
-
-> [Spring Boot: JWT Authentication & Authorization with MongoDB](https://www.bezkoder.com/spring-boot-jwt-auth-mongodb/)
-
-> [Node Express: JWT Authentication & Authorization with MySQL](https://www.bezkoder.com/node-js-jwt-authentication-mysql/)
-
-> [Node Express: JWT Authentication & Authorization with PostgreSQL](https://www.bezkoder.com/node-js-jwt-authentication-postgresql/)
-
-> [Node Express: WT Authentication & Authorization with MongoDB](https://www.bezkoder.com/node-js-mongodb-auth-jwt/)
-
-Related Posts:
-> [React Typescript CRUD example with Axios and Web API](https://www.bezkoder.com/react-typescript-axios/)
-
-> [React Hooks Typescript CRUD example with Axios and Web API](https://www.bezkoder.com/react-typescript-api-call/)
-
-> [React (Javascript) CRUD example to consume Web API](https://www.bezkoder.com/react-crud-web-api/)
-
-> [React Hook Form Typescript example with Validation](https://www.bezkoder.com/react-hook-form-typescript/)
-
-Fullstack with Node Express:
-> [React + Node Express + MySQL](https://www.bezkoder.com/react-node-express-mysql/)
-
-> [React + Node Express + PostgreSQL](https://www.bezkoder.com/react-node-express-postgresql/)
-
-> [React + Node Express + MongoDB](https://www.bezkoder.com/react-node-express-mongodb-mern-stack/)
-
-Fullstack with Spring Boot:
-> [React + Spring Boot + MySQL](https://www.bezkoder.com/react-spring-boot-crud/)
-
-> [React + Spring Boot + PostgreSQL](https://www.bezkoder.com/spring-boot-react-postgresql/)
-
-> [React + Spring Boot + MongoDB](https://www.bezkoder.com/react-spring-boot-mongodb/)
-
-Fullstack with Django:
-
-> [React + Django Rest Framework](https://www.bezkoder.com/django-react-axios-rest-framework/)
-
-Serverless:
-> [React Typescript Firebase example: Build CRUD App](https://www.bezkoder.com/firebase-typescript-react/)
-
-> [React Typescript Firestore example: Build CRUD App](https://www.bezkoder.com/react-typescript-firestore/)
-
-Integration (run back-end & front-end on same server/port)
-> [How to integrate React with Spring Boot](https://www.bezkoder.com/integrate-reactjs-spring-boot/)
-
-> [Integrate React with Node Express on same Server/Port](https://www.bezkoder.com/integrate-react-express-same-server-port/)
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Set port
-.env
-```
-PORT=8081
-```
-
-## Project setup
-
-In the project directory, you can run:
-
-```
-npm install
+```bash
+npm run dev
 # or
-yarn install
-```
-
-or
-
-### Compiles and hot-reloads for development
-
-```
-npm start
+yarn dev
 # or
-yarn start
+pnpm dev
 ```
 
-Open [http://localhost:8081](http://localhost:8081) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The page will reload if you make edits.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
