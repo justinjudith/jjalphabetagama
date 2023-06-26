@@ -12,14 +12,14 @@ interface Props {
   twitterURL: string;
 }
 
-const TeamCard = ({
+const TeamCard: React.FC<Props> = ({
   category,
   memberName,
   about,
   faceBookURL,
   instagramURL,
   twitterURL,
-}: Props) => {
+}) => {
   return (
     <div className="w-full h-full max-w-[320px] flex flex-col justify-center items-center gap-4 shadow-black shadow-md py-6 rounded-2xl">
       <div className=" w-[100px] h-[100px] rounded-full relative">

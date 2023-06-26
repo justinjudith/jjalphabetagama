@@ -6,7 +6,7 @@ interface Props {
   about: string;
 }
 
-const ContactInfoBox = ({  icon: Icon, title, about }: Props) => {
+const ContactInfoBox:React.FC<Props> = ({  icon: Icon, title, about }) => {
   return (
     <div className="w-full h-full min-h-[250px] sm:max-w-[250px] lg:max-w-[258px] flex flex-col justify-center items-center gap-4 px-4 md:px-0 py-5  rounded-lg shadow-black shadow-md">
       <span className="text-5xl font-bold text-cyan-main">

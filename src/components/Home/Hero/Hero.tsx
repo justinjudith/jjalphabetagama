@@ -1,5 +1,5 @@
 import Wrapper from '../../Shared/Wrapper';
-import AutoSlider from './AutoSlider/AutoSlider';
+import AutoSlider from '@/Components/Shared/AutoSlider';
 import PersonalSummary from './Summary/PersonalSummary';
 import Schedule from './Schedule/Schedule';
 

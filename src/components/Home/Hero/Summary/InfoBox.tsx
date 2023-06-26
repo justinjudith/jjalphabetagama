@@ -5,7 +5,7 @@ interface Props {
   Value: any;
 }
 
-const InfoBox = ({ Name, Value }: Props) => {
+const InfoBox: React.FC<Props> = ({ Name, Value }) => {
   return (
     <div className="flex gap-2">
       <div className="w-1/2">

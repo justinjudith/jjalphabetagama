@@ -5,11 +5,11 @@ interface Props {
   text: string;
 }
 
-const Review = ({ image, text }: Props) => {
+const Review: React.FC<Props> = ({ image, text }) => {
   return (
     <div className="w-full h-full max-w-[300px] min-h-[400px] max-h-[400px] flex flex-col bg-white border rounded-3xl px-6 pt-10 gap-4 shadow-black shadow-md">
       <div className="flex items-start justify-start">
-        <div className="text-5xl font-bold text-grey-dark">
+        <div className="text-5xl font-bold text-blue-main">
           <ImQuotesLeft />
         </div>
       </div>

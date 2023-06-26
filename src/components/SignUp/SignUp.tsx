@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import TextInput from '@/Components/Shared/InputField';
+import TextInput from '@/Components/Shared/Inputs/InputField';
 import Button from '@/Components/Shared/Buttons/Button';
 import Link from 'next/link';
 import BaseURL from '@/utils/BASEURL';
@@ -8,7 +8,9 @@ import { ToastError, ToastSuccess, ToastWarning } from '../Shared/Notification';
 import LogError from '@/utils/LogError';
 import { useRouter } from 'next/navigation';
 import Spinner from '@/utils/Spinner';
-
+import { GrMail } from 'react-icons/gr';
+import { IoIosContact } from 'react-icons/io';
+import PasswordInputField from '../Shared/Inputs/PasswordField';
 interface SignUpInputs {
   fullName: string;
   email: string;
@@ -19,6 +21,15 @@ interface SignUpInputs {
 const SignUp = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisibility((visible) => !visible);
+  };
+  const [confirmPasswordVisibility, setConfirmPasswordVisibility] =
+    useState(false);
+  const toggleConfirmPasswordVisibility = () => {
+    setConfirmPasswordVisibility((visible) => !visible);
+  };
   const [inputs, setInputs] = useState<SignUpInputs>({
     fullName: '',
     email: '',
@@ -93,6 +104,8 @@ const SignUp = () => {
                 setState={handleInputs}
                 disabled={false}
                 compulsory={true}
+                icon={IoIosContact}
+                IconStyle="bottom-[0.8rem]"
               />
               <TextInput
                 id="email"
@@ -103,38 +116,32 @@ const SignUp = () => {
                 setState={handleInputs}
                 disabled={false}
                 compulsory={true}
+                icon={GrMail}
+                IconStyle="bottom-[0.8rem]"
               />
             </div>
-            {/* <DropDown
-              required={true}
-              title="Select Your Role:"
-              state={inputs.role}
-              setState={(e: any) =>
-                setInputs({ ...inputs, role: e.target.value })
-              }
-              variation="glassy"
-              options={roles}
-            /> */}
             <div className="w-full flex flex-col md:flex-row gap-4 ">
-              <TextInput
+              <PasswordInputField
                 id="password"
                 name="password"
-                type="password"
                 title="Password:"
                 state={inputs.password}
                 setState={handleInputs}
                 disabled={false}
                 compulsory={true}
+                password={passwordVisibility}
+                togglePassword={togglePasswordVisibility}
               />
-              <TextInput
+              <PasswordInputField
                 id="confirmPassword"
                 name="confirmPassword"
-                type="password"
                 title="Confirm Password:"
                 state={inputs?.confirmPassword || ''}
                 setState={handleInputs}
                 disabled={false}
                 compulsory={true}
+                password={confirmPasswordVisibility}
+                togglePassword={toggleConfirmPasswordVisibility}
               />
             </div>
           </div>

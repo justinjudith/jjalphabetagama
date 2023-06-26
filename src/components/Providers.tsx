@@ -5,7 +5,7 @@ interface Props {
   children: ReactNode;
 }
 
-const Providers = ({ children }: Props) => {
+const Providers: React.FC<Props> = ({ children }) => {
   return <SessionProvider>{children}</SessionProvider>;
 };
 

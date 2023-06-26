@@ -34,11 +34,54 @@ const Booking: React.FC<BookingProps> = ({ open, setOpen }) => {
     day: '',
     event: '',
   });
-
+  console.log(inputs.date, inputs.day);
   const handleInputs = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setInputs({ ...inputs, [name]: value });
+
+    if (name === 'date') {
+      // Perform logic for date input
+      const selectedDate = value;
+
+      // Perform the logic to determine the corresponding day based on the selected date
+      const dateObj = new Date(selectedDate);
+      const dayOfWeek = dateObj.getDay();
+
+      // Map the dayOfWeek to the corresponding radio button value
+      let correspondingDay = '';
+      switch (dayOfWeek) {
+        case 0:
+          correspondingDay = 'sunday';
+          break;
+        case 1:
+          correspondingDay = 'monday';
+          break;
+        case 2:
+          correspondingDay = 'tuesday';
+          break;
+        case 3:
+          correspondingDay = 'wednesday';
+          break;
+        case 4:
+          correspondingDay = 'thursday';
+          break;
+        case 5:
+          correspondingDay = 'friday';
+          break;
+        case 6:
+          correspondingDay = 'saturday';
+          break;
+        default:
+          correspondingDay = '';
+          break;
+      }
+
+      setInputs({ ...inputs, [name]: value, day: correspondingDay });
+    } else {
+      // Handle other inputs
+      setInputs({ ...inputs, [name]: value });
+    }
   };
+
   const handleEventClosed = () => {
     setOpen(false);
   };

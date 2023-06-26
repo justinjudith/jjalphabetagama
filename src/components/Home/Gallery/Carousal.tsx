@@ -35,10 +35,12 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
   prevArrow: <PrevArrow />,
   nextArrow: <NextArrow />,
 };
-const Carousal = () => {
+const Carousal:React.FC = () => {
   return (
     <Wrapper id="gallery" style="w-full h-full mt-20">
       <Heading text="Our Gallery" />

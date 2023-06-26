@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import TextInput from '@/Components/Shared/InputField';
+import TextInput from '@/Components/Shared/Inputs/InputField';
 import Button from '@/Components/Shared/Buttons/Button';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -8,9 +8,14 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import { ToastSuccess, ToastError } from '../Shared/Notification';
 import Spinner from '@/utils/Spinner';
 import md5 from 'md5';
-
+import { GrMail } from 'react-icons/gr';
+import PasswordInputField from '../Shared/Inputs/PasswordField';
 const Login = () => {
   const [loading, setLoading] = useState<boolean>(false);
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisibility((visible) => !visible);
+  };
   const router = useRouter();
   const [inputs, setInputs] = useState({
     email: '',
@@ -64,16 +69,19 @@ const Login = () => {
               setState={handleInputs}
               disabled={false}
               compulsory={true}
+              icon={GrMail}
+              IconStyle="bottom-[0.8rem]"
             />
-            <TextInput
+            <PasswordInputField
               id="password"
               name="password"
-              type="password"
               title="Password:"
               state={inputs.password}
               setState={handleInputs}
               disabled={false}
               compulsory={true}
+              password={passwordVisibility}
+              togglePassword={togglePasswordVisibility}
             />
           </div>
           <Button

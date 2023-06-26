@@ -5,7 +5,7 @@ interface Props {
   text: string;
 }
 
-const NavLogo = ({ image, text }: Props) => {
+const NavLogo: React.FC<Props> = ({ image, text }) => {
   return (
     <div className="flex flex-col justify-center items-center">
       <Image src={image} alt={text} width={40} height={40} />

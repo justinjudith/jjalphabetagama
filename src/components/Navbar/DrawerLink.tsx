@@ -6,7 +6,7 @@ interface Props {
   style?: string;
 }
 
-const DrawerLink = ({ text, link, style }: Props) => {
+const DrawerLink: React.FC<Props> = ({ text, link, style }) => {
   return (
     <Link href={link}>
       <button

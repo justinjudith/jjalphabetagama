@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Wrapper from '@/Components/Shared/Wrapper';
-import Image from 'next/image';
-import InputField from './InputFiled';
+import AutoSlider from '@/Components/Shared/AutoSlider';
+import InputField from '@/Components/Shared/Inputs/InputField';
 import ContactInfoBox from './ContactInfoBox';
 import BASEURL from '@/utils/BASEURL';
 import LogError from '@/utils/LogError';
@@ -85,11 +85,9 @@ function ContactUs({ fetchedContactData }: any) {
   };
   return (
     <Wrapper id="contactus" style="w-full h-full p-5 overflow-hidden">
-      <div className="grid md:grid-cols-2 mx-6 lg:mx-0">
-        <div className="w-full h-full p-6">
-          <div className="w-full h-full relative">
-            <Image src="/Hero.png" alt="" fill className="object-contain" />
-          </div>
+      <div className="w-full h-full md:grid md:grid-cols-2 mx-4 lg:mx-0 gap-2">
+        <div className="w-full h-full text-center px-4 relative">
+          <AutoSlider />
         </div>
         <form
           onSubmit={handleSubmit}
@@ -108,6 +106,7 @@ function ContactUs({ fetchedContactData }: any) {
               compulsory={true}
               disabled={false}
               icon={TiMail}
+              IconStyle="bottom-5"
             />
             <InputField
               type="text"
@@ -120,6 +119,7 @@ function ContactUs({ fetchedContactData }: any) {
               compulsory={true}
               disabled={false}
               icon={IoIosContact}
+              IconStyle="bottom-5"
             />
           </div>
           <InputField
@@ -133,6 +133,7 @@ function ContactUs({ fetchedContactData }: any) {
             compulsory={true}
             disabled={false}
             icon={MdLocationOn}
+            IconStyle="bottom-5"
           />
           <div className="w-full flex flex-col gap-2 justify-start">
             <label htmlFor="message">Message</label>
@@ -171,16 +172,6 @@ function ContactUs({ fetchedContactData }: any) {
         />
         <ContactInfoBox icon={MdFax} title={'FAX'} about={fax} />
         <ContactInfoBox icon={GrMail} title={'EMAIL'} about={email} />
-        {/* </> */}
-        {/* // <ContactInfoBox */}
-        {/* //   key={id}
-            //   icon={icon}
-            //   title={title}
-            //   about={about}
-            //   id={id}
-            // /> */}
-        {/* );
-        })} */}
       </div>
     </Wrapper>
   );

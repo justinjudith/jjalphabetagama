@@ -5,7 +5,6 @@ import SubHeading from '@/Components/Shared/Headings/SubHeading';
 import Review from './Review';
 import Stats from './Stats';
 import ReviewJSON from '../../../Constants/Review.json';
-import StatJSON from '../../../Constants/Stats.json';
 import { FaHandshake, FaAward } from 'react-icons/fa';
 import { BiCalendarStar } from 'react-icons/bi';
 import { BsReception4 } from 'react-icons/bs';
@@ -26,9 +25,10 @@ function Reviews({ count }: ReviewProps) {
               className="object-contain hidden md:block"
             />
           </div>
-          <h1 className="text-center text-3xl mb-8 lg:text-5xl font-bold text-black lg:text-white">
-            What Friends and Public says
-          </h1>
+          <Heading
+            text="What Friends and Public Says"
+            style={'text-3xl lg:text-white text-black'}
+          />
         </div>
         <div className="w-full h-full lg:absolute lg:top-32 lg:left-[2.8rem] flex flex-wrap justify-center gap-7 max-w-[1000px] mx-auto">
           {ReviewJSON.map(({ text, image, id }: any) => {
@@ -45,7 +45,7 @@ function Reviews({ count }: ReviewProps) {
           />
 
           <div className="flex flex-wrap gap-4 lg:gap-[3rem] justify-center mt-8 px-6 md:px-3">
-            <Stats count={count} about="Events" icon={BiCalendarStar} />
+            <Stats count={count} about={'Events'} icon={BiCalendarStar} />
             <Stats count={count} about="Clients" icon={FaHandshake} />
             <Stats count={16} about="Success" icon={BsReception4} />
             <Stats count={10} about="Awards" icon={FaAward} />

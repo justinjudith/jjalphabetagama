@@ -13,7 +13,7 @@ interface ScheduleProps {
   fetchedEvents?: any;
 }
 
-const Schedule = ({ fetchedEvents }: ScheduleProps) => {
+const Schedule: React.FC<ScheduleProps> = ({ fetchedEvents }) => {
   const { data: session } = useSession();
   const [open, setOpen] = useState(false);
   const [redirectLogin, setRedirectLogIn] = useState(false);

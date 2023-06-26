@@ -4,25 +4,20 @@ import { FcCalendar } from 'react-icons/fc';
 import DayJSON from '../../../../../../Constants/Day.json';
 interface Props {
   selectedEvent: string;
-  selectedDay: string;
   date: any;
   day: string;
   time: any;
-  handleDayChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  handleDateChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  handleTimeChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleInputsChange:(event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const DateTimeModal = ({
+const DateTimeModal: React.FC<Props> = ({
   selectedEvent,
-  selectedDay,
   date,
   day,
   time,
-  handleDayChange,
-  handleDateChange,
-  handleTimeChange,
-}: Props) => {
+  handleInputsChange
+ 
+}) => {
   return (
     <>
       <div className="border flex justify-between py-4 md:py-8 px-4 font-bold min-w-[300px] ">
@@ -52,7 +47,7 @@ const DateTimeModal = ({
               name="date"
               id=""
               value={date}
-              onChange={handleDateChange}
+              onChange={handleInputsChange}
             />
             <div className="font-bold">Time</div>
             <input
@@ -60,7 +55,7 @@ const DateTimeModal = ({
               name="time"
               id=""
               value={time}
-              onChange={handleTimeChange}
+              onChange={handleInputsChange}
             />
           </div>
 
@@ -74,8 +69,8 @@ const DateTimeModal = ({
                     key={id}
                     label={label}
                     value={value}
-                    checked={selectedDay === value}
-                    onChange={handleDayChange}
+                    checked={day === value}
+                    onChange={handleInputsChange}
                   />
                 );
               })}

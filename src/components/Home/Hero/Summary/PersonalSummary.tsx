@@ -4,7 +4,7 @@ interface PersonalSummary {
   fetchUserSummary?: any;
 }
 
-const PersonalSummary = ({ fetchUserSummary }: PersonalSummary) => {
+const PersonalSummary: React.FC<PersonalSummary> = ({ fetchUserSummary }) => {
   const {
     dateOfBirth,
     age,

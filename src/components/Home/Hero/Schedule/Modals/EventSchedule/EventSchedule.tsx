@@ -6,7 +6,10 @@ interface Props {
   handleEventChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const EventModal = ({ selectedEvent, handleEventChange }: Props) => {
+const EventModal: React.FC<Props> = ({
+  selectedEvent,
+  handleEventChange,
+}) => {
   return (
     <>
       <div className="border py-4 md:py-8 px-4 font-bold">

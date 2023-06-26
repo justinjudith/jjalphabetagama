@@ -10,7 +10,7 @@ function Focus() {
       <div className="w-full h-full flex justify-center items-center flex-col mt-20">
         <Heading text="Our main focus Areas" />
         <Link href="#contactus">
-          <button className="w-[150px] h-[50px]  absolute hidden md:flex justify-center items-center  top-0 right-0 bg-blue-main px-5 py-[8px] rounded-[3rem] border font-bold capitalize">
+          <button className="w-[150px] h-[50px]  absolute hidden md:flex justify-center items-center  top-0 right-0 bg-blue-main px-5 py-[8px] rounded-[3rem] border font-bold capitalize text-white hover:bg-grey-main hover:text-black">
             Contact Us
           </button>
         </Link>

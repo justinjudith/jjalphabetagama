@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from '@mui/material/Modal';
-import DateTimeModal from './DateTimeSchedule';
+import DateTimeSchedule from './DateTimeSchedule';
 import formatEvent from '@/utils/Formats/formatEvent';
 interface DateTimeModelProp {
   open: boolean;
@@ -35,15 +35,12 @@ const DateTimeModel: React.FC<DateTimeModelProp> = ({
           Schedule your appointment here...!
         </h1>
         <div>
-          <DateTimeModal
+          <DateTimeSchedule
             selectedEvent={Event}
-            selectedDay={day}
             date={date}
             day={day}
             time={time}
-            handleDayChange={handleInputs}
-            handleDateChange={handleInputs}
-            handleTimeChange={handleInputs}
+            handleInputsChange={handleInputs}
           />
         </div>
         <div className="flex items-end justify-between gap-4 lg:mt-8 mt-4">

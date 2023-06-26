@@ -10,7 +10,7 @@ interface Props {
   event: string;
 }
 
-const EventSummary = ({ day, date, time, event }: Props) => {
+const EventSummary: React.FC<Props> = ({ day, date, time, event }) => {
   const Day: string = formatDay(day);
   const Event: string = formatEvent(event);
   const Date: string = formatDate(date);
