@@ -84,9 +84,9 @@ function ContactUs({ fetchedContactData }: any) {
     }
   };
   return (
-    <Wrapper id="contactus" style="w-full h-full p-5 overflow-hidden">
-      <div className="w-full h-full md:grid md:grid-cols-2 mx-4 lg:mx-0 gap-2">
-        <div className="w-full h-full text-center px-4 relative">
+    <Wrapper id="contactus" style="w-full h-full p-5">
+      <div className="w-full h-full flex md:grid md:grid-cols-2 mx-auto md:mx-4 lg:mx-0 gap-2">
+        <div className="w-full h-full text-center px-4 mx-auto relative md:shadow-black md:shadow-md rounded-lg">
           <AutoSlider />
         </div>
         <form

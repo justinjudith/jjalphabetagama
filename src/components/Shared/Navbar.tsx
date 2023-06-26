@@ -80,7 +80,12 @@ function Navbar() {
               {/* {NavButtonData.map(({ link, text, id }: any) => {
                 return <NavButton link={link} text={text} key={id} style="" />;
               })} */}
-              <NavButton link='#team' text={'About Us'} style={'min-w-[144px]'} />
+              <NavButton
+                link="#team"
+                text={'About Us'}
+                style={'min-w-[144px]'}
+              />
+              <NavButton link={'/medical'} text={'Medical'} />
               {session ? (
                 <button
                   className={`w-full h-full px-5 py-[8px] rounded-[3rem] border font-bold uppercase hover:bg-blue-main hover:text-white`}

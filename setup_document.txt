@@ -8,3 +8,7 @@ or
 
 For Development or Running it in Local Environment Run
 npm run dev
+
+For Pull Request 
+
+git pull -u origin master
